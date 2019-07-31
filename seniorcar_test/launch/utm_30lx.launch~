@@ -1,0 +1,9 @@
+<launch>
+
+<node pkg="urg_node" type="urg_node" name="urg_node_front_tilt">
+  	<param name="serial_port" value="/dev/ttyACM0"/>
+</node>
+
+<node pkg="rviz" type="rviz" name="rviz"/>
+
+</launch>

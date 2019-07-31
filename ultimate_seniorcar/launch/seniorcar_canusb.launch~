@@ -1,0 +1,14 @@
+<launch>
+
+    <arg name="canusb_port"        value="/dev/ttyUSB1"/>
+    
+
+    <arg name="canusb_steer_angle_offset" value="-2.2"/>
+
+
+    <param name="canusb_port" value="$(arg canusb_port)"/>
+    <node pkg="ultimate_seniorcar" type="canusb_connecter.py" name="can_usbconnecter" output="screen">
+	<param name="steer_angle_offset" value="$(arg canusb_steer_angle_offset)"/>
+    </node>
+    
+</launch>

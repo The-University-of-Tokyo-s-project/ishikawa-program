@@ -1,0 +1,5 @@
+<launch>
+<node pkg = "ultimate_seniorcar" type = "front.py" name = "front" /> 
+<node pkg = "ultimate_seniorcar" type = "back.py" name = "back" /> 
+<node pkg = "ultimate_seniorcar" type = "test_gb.py" name = "test_gb" />
+</launch>
