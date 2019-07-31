@@ -1,0 +1,46 @@
+<!--2018/4/8/14:00
+<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node_front_tilt">
+    <param name="max_ang" value="0.8"/>
+    <param name="min_ang" value="-0.8"/>
+    <param name="port" value="$(arg front_tiltLRF_port)"/>
+    <param name="skip" value="1"/>
+    <param name="cluster" value="1"/>
+    <param name="intensity" value="true"/>
+    <param name="frame_id" value="/laser_tilt"/>
+    <remap from="scan" to="scan_tilt"/>
+</node>
+<!--<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser_tilt" args="1.06 0.05 0.53 0.0 0.65 0.0 /base_link /laser_tilt 40" /> -->
+
+<!--2018/4/8/14:00
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser_tilt" args="1.1 0.05 0.54 0.0 0.32 0.0 /base_link /laser_tilt 40" />
+<!--
+  <node pkg="urg_node" type="urg_node" name="urg_node_tilt">
+    <param name="angle_max" value="0.8"/>
+      <param name="angle_min" value="-0.8"/>
+      <param name="serial_port" value="$(arg front_tiltLRF_port)"/>
+      <param name="frame_id" value="/laser_tilt"/>
+      <param name="publish_intensity" value="false"/>
+      <remap from="scan" to="scan_tilt"/>
+  </node>
+-->
+<!--2018/4/8/14:00
+	<node pkg="urg_node" type="urg_node" name="urg_node_back">
+		<param name="angle_max" value="1.3"/>
+  		<param name="angle_min" value="-1.3"/>
+  		<param name="serial_port" value="$(arg backLRF_port)"/>
+  		<param name="frame_id" value="/laser_back"/>
+  		<param name="publish_intensity" value="false"/>
+  		<remap from="scan" to="scan_back"/>
+	</node>
+
+	<node pkg="ira_laser_tools" name="laserscan_multi_merger" type="laserscan_multi_merger" output="screen">
+    	<param name="destination_frame" value="/laser_front"/>
+    	<param name="cloud_destination_topic" value="/merged_cloud"/>
+    	<param name="scan_destination_topic" value="/scan_multi"/>
+    	<param name="laserscan_topics" value="/scan_front /scan_back" /> <!-- LIST OF THE LASER SCAN TOPICS TO SUBSCRIBE -->
+      <!--2018/4/8/14:00
+  </node>
+
+	<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser_back" args="-0.16 0.0 0.27 3.14 0.0 0.0 /base_link /laser_back 40" />
+	<node pkg="tf" type="static_transform_publisher" name="base_link_to_velodyne" args="1.06 0.0 1.7 0.0 0.0 0.0 /base_link /velodyne 40"/>
+-->
