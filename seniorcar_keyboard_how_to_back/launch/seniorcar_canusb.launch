@@ -1,0 +1,9 @@
+<launch>
+
+	<arg name="canusb_port" value="/dev/ttyUSB1" />
+
+	<!-- 各種センサへの接続 -->
+	<param name="canusb_port" value="$(arg canusb_port)"/>
+	<node pkg="seniorcar_keyboard" type="canusb_connecter.py" name="can_usbconnecter" output="screen"/>
+
+</launch>
