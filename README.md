@@ -1,4 +1,5 @@
 # seniorcar-program
+ubuntu14.04 indigo
 ## ultimate-seniorcar
 改造セニアカーの基本的なプログラム
 1.セニアカーのCAN通信をマウントしてPCからの制御値が入るようにする
